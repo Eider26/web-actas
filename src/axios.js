@@ -1,9 +1,10 @@
 import Axios from 'axios'
 
 const api = Axios.create({
-    baseURL: 'localhost:8000', // URL base de tu API
+    baseURL: 'http://localhost:8000',
     headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
     }
 });
 

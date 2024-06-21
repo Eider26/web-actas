@@ -1,6 +1,6 @@
 <template>
   <main
-    class="flex justify-center items-center h-screen w-full bg-cover bg-[url('/public/images/login-bg.jpg')]"
+    class="flex justify-center items-center h-screen w-full bg-cover bg-[url('/images/login-bg.jpg')]"
   >
     <div class="flex w-4/6 h-2/4 bg-blue-400/80">
       <div class="flex-1 relative" >
