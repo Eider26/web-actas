@@ -1,4 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import actas from '@/views/actas.vue';
+import LoginView from '../views/LoginView.vue';
+import App from '@/App.vue';
+
+const routes = [
+  {
+    path: '/src/views/LoginView.vue', component: LoginView,
+  },{
+    path: '/src/views/actas.vue', component: actas,
+  }
+]
 
 
 const router = createRouter({
