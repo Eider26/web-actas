@@ -2,7 +2,7 @@
     <div class="bg-blue-300 min-h-screen flex flex-col justify-center items-center">
       <header class="container mx-auto py-8">
         <a href="#" class="flex items-center gap-2 text-white font-bold text-3xl">
-          <img src="./assets/images/actas-removebg-preview.png" alt="Tus Actas" class="icon" width="50" height="50">
+          <img src="/public/images/actas-removebg-preview.png" alt="Tus Actas" class="icon" width="50" height="50">
           <span>Tu Administrador de Actas</span>
         </a>
       </header>
@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="lg:w-1/2">
-            <img src="./assets/images/facetime-3-68.png" alt="Asistente Virtual" class="w-full" />
+            <img src="/public/images/bg3.jpg" alt="Asistente Virtual" class="w-full" />
           </div>
         </div>
       </div>

@@ -129,7 +129,12 @@
   body {
     font-family: 'Inter', sans-serif;
   }
-  
+  .form-group grid grid-cols-2 gap-4 mb-4{
+    width: 10px;
+    height: 10px;
+    padding: 10%;
+    align-items: center;
+  }
   .grid {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -351,6 +356,10 @@
     background: none;
     border: none;
     cursor: pointer;
+  }
+
+  .titulo{
+    font-size: larger;
   }
   </style>
   
