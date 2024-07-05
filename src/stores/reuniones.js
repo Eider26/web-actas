@@ -17,12 +17,22 @@ const useReunionesStore = defineStore('reuniones', () => {
         return response;
     }
 
+    const getReunion = async (id) => {
+        const response = await api.get(`/reuniones/${id}`);
+        return response;
+    }
+
     const deleteReunion = async (id) => {
         const response = await api.delete(`/reuniones/${id}`);
         return response;
     }
 
-    return { reuniones, getReuniones, storeReuniones, deleteReunion }
+    const updateReunion = async (id, form) => {
+        const response = await api.put(`/reuniones/${id}`, form);
+        return response;
+    }
+
+    return { reuniones, getReunion, getReuniones, storeReuniones, deleteReunion, updateReunion }
 });
 
 export default useReunionesStore;   

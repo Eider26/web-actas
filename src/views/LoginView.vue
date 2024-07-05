@@ -10,7 +10,7 @@
             name="usuario" />
           <input class="w-full bg-gray-100 rounded p-2" v-model="form.contrasena" type="password"
             placeholder="Contraseña" name="contrasena" />
-            
+
           <button class="bg-blue-500 text-white p-2 w-32 mt-12 rounded">
             Entrar
           </button>
@@ -30,6 +30,7 @@
 </template>
 <script setup>
 import useAuthStore from "@/stores/auth";
+import router from "@/router";
 import { ref } from "vue";
 
 const auth = useAuthStore();
@@ -41,7 +42,9 @@ const form = ref({
 
 const submit = async () => {
   const response = await auth.login(form.value);
-  console.log(response);
+  if (response.status === 200) {
+    router.push({ name: "reuniones.index" });
+  }
 
 };
 

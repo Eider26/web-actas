@@ -19,15 +19,21 @@ const router = createRouter({
       component: () => import('../views/RegisterView.vue'),
     },
     {
+      path: '/reuniones',
+      name: 'reuniones.index',
+      component: () => import('../views/reuniones/IndexView.vue'),
+    },
+    {
       path: '/reuniones/crear',
       name: 'reuniones.create',
       component: () => import('../views/reuniones/CreateView.vue'),
     },
     {
-      path: '/reuniones',
-      name: 'reuniones.index',
-      component: () => import('../views/reuniones/IndexView.vue'),
-    }
+      path: '/reuniones/:id/editar',
+      name: 'reuniones.editar',
+      component: () => import('../views/reuniones/CreateView.vue'),
+    },
+    
   ]
 })
 
