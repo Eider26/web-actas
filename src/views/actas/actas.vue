@@ -101,6 +101,22 @@
   
   <script>
   export default {
+  name: 'App',
+  mounted() {
+    this.addFavicon();
+  },
+  methods: {
+    addFavicon() {
+      let link = document.createElement('link');
+      link.rel = 'icon';
+      link.href = '/public/favicon.ico'; // Asegúrate de que la ruta sea correcta
+      document.head.appendChild(link);
+    }
+  }
+}
+
+
+  export default {
     name: 'Actas',
     methods: {
       enviarDatos() {
