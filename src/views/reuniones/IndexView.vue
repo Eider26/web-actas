@@ -29,7 +29,10 @@
                                     <td class="p-4">{{ reunion.estado }}</td>
                                     <td class="p-4">
                                         <RouterLink :to="{ name: 'reuniones.editar', params: { id: reunion.id_reunion } }"
-                                            class="bg-blue-500 mr-2 text-white p-2 rounded">Editar</RouterLink>
+                                            class="bg-green-500 mr-2 text-white p-2 rounded">Editar</RouterLink>
+                                            <RouterLink  class="bg-blue-500 mr-2 text-white p-2 rounded" :to="{ name: 'reuniones.actas', params: { id: reunion.id_reunion } }">
+                                            Actas
+                                            </RouterLink>
                                         <button @click="destroy(reunion.id_reunion)"
                                             class="bg-red-500 text-white p-2 rounded">Eliminar</button>
                                     </td>

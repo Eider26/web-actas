@@ -33,6 +33,22 @@ const router = createRouter({
       name: 'reuniones.editar',
       component: () => import('../views/reuniones/CreateView.vue'),
     },
+    {
+      path: '/reuniones/:id/actas',
+      name: 'reuniones.actas',
+      component: () => import('../views/actas/IndexView.vue'),
+    },
+    {
+      path: '/reuniones/:id/actas/crear',
+      name: 'actas.create',
+      component: () => import('../views/actas/CreateView.vue'),
+    },
+    {
+      path: '/actas/:id/editar',
+      name: 'actas.editar',
+      component: () => import('../views/actas/CreateView.vue'),
+    },
+
     
   ]
 })
