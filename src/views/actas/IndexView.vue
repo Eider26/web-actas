@@ -36,12 +36,12 @@
                             <td class="p-4">
                                 <RouterLink :to="{ name: 'actas.editar', params: { id: data.id_acta } }"
                                 class="bg-green-500 mr-2 text-white p-2 rounded">Editar</RouterLink>
-                                <!-- 
+                                
                                 <RouterLink class="bg-blue-500 mr-2 text-white p-2 rounded"
-                                    :to="{ name: 'reuniones.actas', params: { id: reunion.id_reunion } }">
-                                    Actas
+                                    :to="{ name: 'actas.compromisos', params: { idReunion: data.id_reunion, idActa:  data.id_acta } }">
+                                    Compromisos
                                 </RouterLink>
-                                -->
+                                
                                 <button @click="destroy(data.id_acta)"
                                     class="bg-red-500 text-white p-2 rounded">Eliminar</button> 
                             </td>

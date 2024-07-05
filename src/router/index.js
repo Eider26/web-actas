@@ -48,8 +48,26 @@ const router = createRouter({
       name: 'actas.editar',
       component: () => import('../views/actas/CreateView.vue'),
     },
-
-    
+    {
+      path: '/reuniones/:idReunion/actas/:idActa/compromisos',
+      name: 'actas.compromisos',
+      component: () => import('../views/compromisos/IndexView.vue'),
+    },
+    {
+      path: '/reuniones/:idReunion/actas/:idActa/compromisos/crear',
+      name: 'compromisos.create',
+      component: () => import('../views/compromisos/CreateView.vue'),
+    },
+    {
+      path: '/reuniones/:idReunion/actas/:idActa/compromisos/:id/editar',
+      name: 'compromisos.editar',
+      component: () => import('../views/compromisos/CreateView.vue'),
+    },
+    {
+      path: '/reuniones/:id/pdf',
+      name: 'reuniones.pdf',
+      component: () => import('../views/Pdf.vue'),
+    }
   ]
 })
 

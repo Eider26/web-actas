@@ -66,6 +66,7 @@ const store = async () => {
 
 const update = async () => {
     await updateActa(form.value.id_acta, form.value);
+    router.push({ name: 'reuniones.actas', params: { id: form.value.id_reunion } });
 };
 
 

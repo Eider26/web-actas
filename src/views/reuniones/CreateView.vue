@@ -51,6 +51,7 @@ import Layout from '@/layouts/Layout.vue';
 import useAuthStore from '@/stores/auth';
 import { onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import router from '@/router';
 
 const route = useRoute();
 
@@ -96,6 +97,8 @@ const store = async () => {
 
         await storeReuniones(form.value);
 
+        router.push({ name: 'reuniones.index' });
+
     } catch (error) {
         console.log(error);
     }
@@ -107,6 +110,8 @@ const update = async () => {
         console.log(form.value)
 
         await updateReunion(form.value.id_reunion, form.value);
+
+        router.push({ name: 'reuniones.index' });
 
     } catch (error) {
         console.log(error);
