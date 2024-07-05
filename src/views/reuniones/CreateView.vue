@@ -116,7 +116,7 @@ const update = async () => {
 watch(() => route.params.id, async (id) => {
     if (id) {
         const response = await getReunion(id);
-        form.value = response.data.data[0];
+        form.value = response.data.data;
     } else {
         resetForm();
     }
@@ -127,7 +127,7 @@ onMounted(async () => {
 
     if (route.params.id) {
         const response = await getReunion(route.params.id);
-        form.value = response.data.data[0];
+        form.value = response.data.data;
     } else {
         resetForm();
     }
