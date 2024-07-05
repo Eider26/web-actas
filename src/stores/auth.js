@@ -17,13 +17,17 @@ const useAuthStore = defineStore('auth', () => {
         return response;
     }
 
+    const logout = () => {
+        localStorage.removeItem('access_token');
+    }
+
     const getUser = async () => {
         const response = await api.get('auth/user');
         user.value = response.data.data;
         return response;
     }
 
-    return { user, getUser, login, register }
+    return { user, getUser, login, register, logout }
 
 });
 

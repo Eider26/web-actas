@@ -1,4 +1,5 @@
 import Axios from 'axios'
+import router from './router';
 
 const api = Axios.create({
     baseURL: 'http://localhost:8000',
@@ -18,6 +19,19 @@ api.interceptors.request.use(
         return config;
     },
     error => {
+        return Promise.reject(error);
+    }
+);
+
+api.interceptors.response.use(
+    response => {
+        return response;
+    },
+    error => {
+        if (error.response.status === 401) {
+            localStorage.removeItem('access_token');
+            router.push({name: 'login'});
+        }
         return Promise.reject(error);
     }
 );
