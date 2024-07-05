@@ -10,17 +10,19 @@
             name="usuario" />
           <input class="w-full bg-gray-100 rounded p-2" v-model="form.contrasena" type="password"
             placeholder="Contraseña" name="contrasena" />
+            
           <button class="bg-blue-500 text-white p-2 w-32 mt-12 rounded">
             Entrar
           </button>
-        </form>
-      </div>
 
+        </form>
+
+      </div>
       <div class="flex justify-center items-center flex-1 text-white">
         <div>
           <h2 class="text-center text-3xl font-semibold">¿Aún no tienes una cuenta?</h2>
           <p class="text-white text-xl text-center my-8">Regístrate para que puedas iniciar sesion</p>
-          <button class="py-2 px-8 font-semibold border">Registrarse</button>
+          <RouterLink to="/register" class="py-2 px-8 font-semibold border">Registrarse</RouterLink>
         </div>
       </div>
     </div>
